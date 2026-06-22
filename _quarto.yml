@@ -1,0 +1,14 @@
+project:
+  type: website
+  output-dir: docs
+  render: 
+    - index.qmd
+  post-render: postRender.R
+
+format: 
+  html:
+    theme: common_shared_assets/stylesheets/custom.scss
+    css: common_shared_assets/stylesheets/custom.css
+    embed-resources: true   
+    logo: common_shared_assets/assets/ETDDLogo.svg
+  
