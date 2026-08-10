@@ -9,6 +9,10 @@ if (!dir.exists(file.path(newDir))) {
 } else {
   print("Directory Exists")
 }
-      
-       
-
+cnameLoc <- here::here("docs","CNAME")
+if (!file.exists(cnameLoc)){
+  file.create(cnameLoc)
+}
+fileConn<-file(cnameLoc)
+writeLines("reports.etdd.org", fileConn)
+close(fileConn)
